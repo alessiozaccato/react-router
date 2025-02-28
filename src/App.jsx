@@ -17,7 +17,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
-            <Route path="/" Component={HomePage} />
+            {/* I can write index insted of path="/" ,it's the same thing */}
+            <Route index Component={HomePage} />
             <Route path="/aboutus" Component={AboutUs} />
             <Route path="/posts" Component={Posts} />
           </Route>
