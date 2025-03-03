@@ -1,10 +1,12 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const SinglePost = () => {
 
     const { id } = useParams()
+
+    const navigate = useNavigate()
 
     const [post, setPost] = useState({
         id: 0,
@@ -23,6 +25,7 @@ const SinglePost = () => {
         //     .then( data => setPost( data ) )
 
 
+
     }, [id])
 
     const { title, content, image, tags } = post
@@ -39,6 +42,10 @@ const SinglePost = () => {
                 <h1>{title}</h1>
                 <p > {content}</p>
 
+
+                <button className="btn btn-danger" onClick={() => navigate(-1)}>
+                    Torna alla pagina precedente
+                </button>
             </div>
 
         </>

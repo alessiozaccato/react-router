@@ -27,15 +27,15 @@ const Posts = () => {
 
                         return (
                             <div key={id} className='col-4 gy-4'>
-                                <div className='card'>
+                                <div className='card h-100'>
                                     <figure>
                                         <img className='card-img-top' src={image} alt={title} />
                                     </figure>
-                                    <div className='card-body'>
+                                    <div className='card-body position-relative'>
                                         <h5 className="card-title">{title}</h5>
-                                        <p className="card-text">{content}</p>
+                                        <p className="card-text py-3">{content}</p>
                                         <NavLink to={`/posts/${id}`}>
-                                            <button className='btn btn-danger'>Vai alla scheda dettagliata</button>
+                                            <button className='btn btn-danger position-absolute bottom-0 end-0'>Vai alla scheda dettagliata</button>
                                         </NavLink>
 
                                     </div>
