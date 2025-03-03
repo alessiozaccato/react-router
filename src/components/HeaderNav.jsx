@@ -16,13 +16,13 @@ const HeaderNav = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/aboutus" className="nav-link" aria-current="page">
-                                    About Us
+                                <NavLink to="/posts" className="nav-link" aria-current="page">
+                                    Posts
                                 </NavLink>
                             </li>
                             <li className="nav-item dropdown">
-                                <NavLink to="/posts" className="nav-link" aria-current="page">
-                                    Posts
+                                <NavLink to="/aboutus" className="nav-link" aria-current="page">
+                                    About Us
                                 </NavLink>
                             </li>
                         </ul>
