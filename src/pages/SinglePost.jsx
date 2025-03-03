@@ -10,7 +10,7 @@ const SinglePost = () => {
         id: 0,
         title: '',
         content: '',
-        image: '',
+        image: null,
         tags: []
     })
 
@@ -25,11 +25,21 @@ const SinglePost = () => {
 
     }, [id])
 
+    const { title, content, image, tags } = post
+
     return (
         <>
             {/* <h1 className="text-center">singolo post : {id}</h1> */}
-            <h1 className="text-center">{post.title}</h1>
-            <p className="text-center"> {post.content}</p>
+            <div className="container text-center">
+                <figure>
+                    <figure>
+                        <img src={image} alt={title} />
+                    </figure>
+                </figure>
+                <h1>{title}</h1>
+                <p > {content}</p>
+
+            </div>
 
         </>
     )

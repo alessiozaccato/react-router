@@ -26,16 +26,37 @@ const Posts = () => {
                         const { id, title, content, image, tags } = post
 
                         return (
-                            <div key={id} className='col-3'>
+                            <div key={id} className='col-4 gy-4'>
+                                <div className='card'>
+                                    <figure>
+                                        <img className='card-img-top' src={image} alt={title} />
+                                    </figure>
+                                    <div className='card-body'>
+                                        <h5 className="card-title">{title}</h5>
+                                        <p className="card-text">{content}</p>
+                                        <NavLink to={`/posts/${id}`}>
+                                            <button className='btn btn-danger'>Vai alla scheda dettagliata</button>
+                                        </NavLink>
 
-                                <NavLink to={`/posts/${id}`}>
-                                    <div className="card">
-                                        <div className="card-body">
-                                            <h4 className="card-title">{title}</h4>
-                                            <p className="card-text">{content}</p>
-                                        </div>
                                     </div>
-                                </NavLink>
+                                </div>
+
+                                {/* <div className="card">
+                                    <div className="card-body">
+                                        <NavLink to={`/posts/${id}`}>
+                                            <h4 className="card-title">{title}</h4>
+                                        </NavLink>
+                                        <p className="card-text">{content}</p>
+                                        <figure>
+                                            <img className='img-fluid' src={image} alt={title} />
+                                        </figure>
+                                        <p>{tags}</p>
+                                    </div>
+                                </div> */}
+
+
+
+
                             </div>
                         )
                     })
